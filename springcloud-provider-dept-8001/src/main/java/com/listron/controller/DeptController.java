@@ -29,7 +29,11 @@ public class DeptController {
 
     @GetMapping("/dept/get/{dno}")
     public Dept get(@PathVariable("dno") Long dno){
-        return deptService.queryById(dno);
+        Dept dept = deptService.queryById(dno);
+        if(dept == null){
+            throw new RuntimeException("dno=>"+dno+"不存在该用户，或者信息无法找到～");
+        }
+        return dept;
     }
 
     @GetMapping("/dept/get")

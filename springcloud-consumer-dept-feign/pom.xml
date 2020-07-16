@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-consumer-dept-80</artifactId>
+    <artifactId>springcloud-consumer-dept-feign</artifactId>
+
 
     <dependencies>
         <dependency>
@@ -34,7 +35,13 @@
             <artifactId>spring-cloud-starter-ribbon</artifactId>
             <version>1.4.7.RELEASE</version>
         </dependency>
-<!--        eureka 客户端-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
+        <!--        eureka 客户端-->
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -77,5 +84,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -25,8 +25,7 @@ eureka:
       #发不到7001、7002、7003集群
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: provider-dept-01
-    prefer-ip-address: true #避免出现localhost，可以显示服务器的ip地址
+    instance-id: provider-dept-hystrix-01
 info:
   app.name: listron-springcloud
   company.name: baidu.com
