@@ -1,0 +1,28 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul
+
+
+#zuul需要注册到eureka中，服务注册到eureka中
+
+eureka:
+  client:
+    service-url:
+      #发布到7001、7002、7003集群
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: zuul-9527
+    perfer-ip-address: true
+
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept
+    mydept.path: /mydept/**  #用自己的路径，忽略服务名
+  ignored-services: "*"  #忽略服务名，安全
+  prefix: /listron
+info:
+  app.name: listron-springcloud
+  company.name: baidu.com
