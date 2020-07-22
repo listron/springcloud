@@ -1,0 +1,4 @@
+#spring 配置
+spring:
+  application:
+    name: springcloud-provider-dept-config  #3 个名字相同是前提
